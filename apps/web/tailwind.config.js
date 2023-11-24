@@ -3,7 +3,7 @@ export default {
   content: [
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
-    "@chagic-ui/core/**/*.{js,ts,jsx,tsx}"
+    "./node_modules/@chagic-ui/core/**/*.{js,ts,jsx,tsx}"
   ],
   theme: {
     extend: {},

@@ -3,5 +3,7 @@
     {
       "mode": "auto"
     }
-  ]
+  ],
+  "commentTranslate.targetLanguage": "zh-CN",
+  "commentTranslate.source": "DarkCWK.youdao-youdao"
 }

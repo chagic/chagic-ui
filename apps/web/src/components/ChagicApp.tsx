@@ -1,11 +1,7 @@
-import { ConfigProvider } from "antd";
-import { StyleProvider } from "@ant-design/cssinjs";
-import dayjs from "dayjs";
-import "dayjs/locale/zh-cn";
-import zhCN from "antd/locale/zh_CN";
+
+
 import Chat from "./Chat";
-import WsProvider from "@/context/provider/WsProvider";
-dayjs.locale("zh-cn");
+
 
 interface IAppProps {
   // chats: any[];
@@ -19,11 +15,10 @@ interface IAppProps {
 // };
 const ChagicApp: React.FC<IAppProps> = (props) => {
   return (
-    <ConfigProvider locale={zhCN}>
-      <StyleProvider hashPriority="high">
-        <Chat></Chat>
-      </StyleProvider>
-    </ConfigProvider>
+    <Chat
+      title="xxx"
+    ></Chat>
+    
   );
 };
 

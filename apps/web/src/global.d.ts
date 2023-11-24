@@ -1,4 +1,6 @@
 
-interface Window {
-  __chagic_websocket__: any
+
+declare module "quill" {
+  export type DeltaStatic = any
+  export type Sources = any
 }

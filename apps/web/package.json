@@ -11,15 +11,25 @@
   },
   "dependencies": {
     "@ant-design/cssinjs": "1.18.0-alpha.0",
+    "@ant-design/icons": "^5.2.6",
     "@chagic-ui/core": "workspace:*",
     "antd": "^5.11.1",
+    "axios": "^1.6.2",
     "dayjs": "^1.11.10",
+    "pubsub-js": "^1.9.4",
+    "quill-mention": "^4.1.0",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "react-quill": "^2.0.0",
+    "react-router-dom": "^6.19.0",
+    "socket.io-client": "^4.7.2",
+    "store": "^2.0.12"
   },
   "devDependencies": {
+    "@types/pubsub-js": "^1.8.6",
     "@types/react": "^18.2.8",
     "@types/react-dom": "^18.2.4",
+    "@types/store": "^2.0.5",
     "@typescript-eslint/eslint-plugin": "^6.0.0",
     "@typescript-eslint/parser": "^6.0.0",
     "@vitejs/plugin-react": "^4.0.3",
@@ -27,9 +37,11 @@
     "eslint": "^8.45.0",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.4.3",
+    "less": "^4.2.0",
     "postcss": "^8.4.31",
     "tailwindcss": "^3.3.5",
     "typescript": "^5.1.6",
-    "vite": "^4.4.5"
+    "vite": "^4.4.5",
+    "vite-plugin-svgr": "^4.2.0"
   }
 }
