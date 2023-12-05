@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    window.HFBOT_CONFIG = {
+      EMBED_TOKEN: "dea23138-dad1-4154-81ad-3e21022a5c41",
+      options: {
+          showBadge: true,
+      }
+    };
+    (function(){
+      var c = document.createElement("script");
+      c.type = "text/javascript";
+      c.async = true;
+      c.defer = true;
+      // c.src = "http://bot-widget.chagic.chat/bot-widget.js";
+      c.src = "./example.js";
+      var e = document.body || document.head;
+      e.appendChild(c);
+    })()
+  </script>
+</body>
+</html>

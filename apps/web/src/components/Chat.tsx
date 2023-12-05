@@ -11,7 +11,7 @@ interface IChatProps {
 }
 const Chat: React.FC<IChatProps> = (props) => {
   const chat = useChat();
-
+  console.log(chat);
   return (
     <Layout>
       <Sider style={{ backgroundColor: "#FFFFFF" }}>
