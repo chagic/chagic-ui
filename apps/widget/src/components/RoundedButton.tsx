@@ -10,7 +10,7 @@ export default function RoundedButton(props: IRoundedButtonProps) {
   const { onClick, visible, config } = props;
   return (
     <div
-      className="fixed right-4 bottom-4 rounded-full w-[60px] h-[60px] cursor-pointer overflow-hidden shadow-2xl bg-white"
+      className="rounded-full w-[60px] h-[60px] cursor-pointer overflow-hidden shadow-2xl bg-white"
       onClick={onClick}
       style={{ display: visible ? "none" : "block" }}
     >

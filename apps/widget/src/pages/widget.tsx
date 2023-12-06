@@ -28,6 +28,12 @@ export default function Widget() {
     queryConfig();
   }, []);
 
+  useEffect(() => {
+    window.parent?.postMessage({
+      type: visible ? "open" : "close",
+    }, "*")
+  }, [visible])
+
   if (loading) {
     return null
   }
