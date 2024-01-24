@@ -3,7 +3,12 @@ import { CopyToClipboard } from "react-copy-to-clipboard";
 import { useState } from "react";
 import { Button } from "antd";
 import { CopyOutlined } from "@ant-design/icons";
-export default function Installation() {
+
+type InstallationProps = {
+  bot: Record<string, string>
+}
+export default function Installation(props: InstallationProps) {
+  const { bot } = props;
   const [copied, setCopied] = useState(false);
   const code = `
 <body>

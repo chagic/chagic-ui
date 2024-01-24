@@ -2,9 +2,14 @@ import Layout from "@/components/layout";
 import Settings from "@/pages/settings";
 import LoginPage from "@/pages/login";
 import { RobotOutlined, SettingOutlined } from "@ant-design/icons";
-import Bots from "@/pages/bots";
+import BotList from "@/pages/bots/List";
+import BotSettings from "@/pages/bots/Settings";
+import BotDesign from "@/pages/bots/Design";
 import { MenuDataItem } from "@ant-design/pro-components";
 import type { RouteObject } from "react-router";
+// import Home from "@/pages/home";
+// import CustomerList from "@/pages/customer/list";
+// import SessionList from "@/pages/customer/sessions";
 
 type Item = {
   path: string;
@@ -19,13 +24,51 @@ export const items: Item[] = [
     path: "/",
     name: " ",
     component: Layout,
+ 
     children: [
+      // {
+      //   path: "/home",
+      //   name: "Home",
+      //   icon: <RobotOutlined />,
+      //   component: Home,
+      // },
+      // {
+      //   path: "/customer",
+      //   name: "Customer",
+      //   icon: <RobotOutlined />,
+      //   children: [
+      //     {
+      //       path: "/customer/list",
+      //       name: "Customer List",
+      //       icon: <RobotOutlined />,
+      //       component: CustomerList,
+      //     },
+      //     {
+      //       path: "/customer/sessions",
+      //       name: "Sessions List",
+      //       icon: <RobotOutlined />,
+      //       component: SessionList, 
+      //     }
+      //   ]
+      // },
       {
-        path: "/bots",
-        name: "Bots",
+        path: "/bot",
+        name: "Bot",
         icon: <RobotOutlined />,
-        component: Bots,
+        component: BotList,
       },
+      {
+        path: "/bot/:id/settings",
+        name: "Bot detail",
+        component: BotSettings,
+        isMenu: false
+      }, 
+      {
+        path: "/bot/:id/design",
+        name: "Bot detail",
+        component: BotDesign,
+        isMenu: false
+      }, 
       {
         path: "/settings",
         name: "Settings",

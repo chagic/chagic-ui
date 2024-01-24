@@ -1,8 +1,22 @@
 import { Row, Col, Form, Input, Upload, Button, ColorPicker } from "antd";
 import { UploadOutlined } from "@ant-design/icons";
+import PreviewChat from "./PreviewChat";
+import { useEffect } from "react";
 
-export default function Appearance() {
+type AppearanceProps = {
+  bot: Record<string, string>
+}
+export default function Appearance(props: AppearanceProps) {
+  const { bot } = props;
   const [form] = Form.useForm();
+
+  useEffect(() => {
+    form.setFieldsValue({
+      name: bot.name,
+      logo: bot.logo,
+      color: bot.color,
+    }) 
+  }, [bot])
   return (
     <Row gutter={[8, 8]}>
       <Col span={12}>
@@ -23,7 +37,7 @@ export default function Appearance() {
           </Form.Item>
         </Form>
       </Col>
-      <Col span={12}>TODO: Bot Widget</Col>
+      <Col span={12}>TODO: <PreviewChat /></Col>
     </Row>
   );
 }

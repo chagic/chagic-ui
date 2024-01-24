@@ -1,10 +1,14 @@
 import { PageContainer, ProCard, ProLayout } from "@ant-design/pro-components";
 import { Outlet, useNavigate } from "react-router-dom";
 import { generateMenus, items } from "@/constant/menus";
+import HeaderContent from "@/components/layout/HeaderContent";
+import AvatarRender from "./AvatarRender";
+import PageProvider from "@/context/providers/PageProvider";
 export default () => {
   const navigate = useNavigate();
   const menus = generateMenus(items);
   return (
+    <PageProvider>
     <div
       id="chagic-bot-layout"
       style={{
@@ -12,7 +16,7 @@ export default () => {
       }}
     >
       <ProLayout
-        title="Chagic Bot"
+        title="Antd"
         siderWidth={200}
         menu={{
           type: "group",
@@ -20,7 +24,8 @@ export default () => {
         menuDataRender={() => menus}
         avatarProps={{
           src: "https://gw.alipayobjects.com/zos/antfincdn/efFD%24IOql2/weixintupian_20170331104822.jpg",
-          title: "七妮妮",
+          title: "Wstreet",
+          render: AvatarRender
         }}
         menuItemRender={(item, dom) => (
           <div
@@ -31,7 +36,8 @@ export default () => {
             {dom}
           </div>
         )}
-        layout="side"
+        layout="mix"
+        headerContentRender={HeaderContent}
       >
         <PageContainer>
           <ProCard
@@ -45,5 +51,6 @@ export default () => {
         </PageContainer>
       </ProLayout>
     </div>
+    </PageProvider>
   );
 };
